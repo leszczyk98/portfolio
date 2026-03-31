@@ -1,0 +1,22 @@
+@use "@/styles/mixins.scss" as *;
+
+.navLink {
+  @include flex-center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+  &:hover {
+    color: var(--color-accent-secondary);
+  }
+
+  &Icon {
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+  }
+
+  &Label {
+    font-size: to-rem(16);
+  }
+}

@@ -1,0 +1,21 @@
+@mixin theme-dark {
+  :global(html[data-theme="dark"]) & {
+    @content;
+  }
+}
+
+@mixin theme-light {
+  :global(html[data-theme="light"]) & {
+    @content;
+  }
+}
+
+@function to-rem($px) {
+  @return calc($px / 16 * 1rem);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

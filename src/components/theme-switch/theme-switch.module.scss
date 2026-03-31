@@ -1,0 +1,21 @@
+@use "@/styles/mixins.scss" as *;
+
+.themeSwitch {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: scale var(--transition-fast);
+  &:hover {
+    scale: 1.15;
+  }
+
+  &Icon {
+    @include flex-center;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
