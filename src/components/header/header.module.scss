@@ -7,31 +7,9 @@
   transform: translateX(-50%);
   width: 90%;
   height: 60px;
-  display: flex;
-  overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--color-bg-header);
-    opacity: 0.6;
-    pointer-events: none;
-  }
-
-  &Distortion {
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(6px);
-    filter: url(#liquid-glass);
-    @-moz-document url-prefix() {
-      filter: none;
-    }
-
-    pointer-events: none;
-  }
+  z-index: 10;
 
   &Container {
     position: relative;

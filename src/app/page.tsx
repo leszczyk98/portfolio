@@ -1,88 +1,59 @@
+import { GlassCard } from "@/components/glass-card"
 import { Header } from "@/components/header"
-import styles from "./page.module.scss"
 import cn from "classnames"
+import styles from "./page.module.scss"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Header />
-        <h1>Colors test page</h1>
-        <div className={styles.colorBoxContainer}>
-          <div className={cn(styles.colorBox, styles.colorBoxPrimary)}>
+    <main className={styles.home}>
+      <Header />
+      <h1 style={{ textAlign: "center" }}>Test page</h1>
+      <div className={styles.homeContainer}>
+        <ul className={styles.verticalList}>
+          <h2 style={{ textAlign: "center" }}>Colors</h2>
+          <li className={cn(styles.colorBox, styles.colorBoxPrimary)}>
             BG Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxSecondary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxSecondary)}>
             BG Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTertiary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxTertiary)}>
             BG Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextPrimary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxTextPrimary)}>
             Text Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextSecondary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxTextSecondary)}>
             Text Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextTertiary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxTextTertiary)}>
             Text Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentPrimary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxAccentPrimary)}>
             Accent Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentSecondary)}>
+          </li>
+          <li className={cn(styles.colorBox, styles.colorBoxAccentSecondary)}>
             Accent Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxPrimary)}>
-            BG Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxSecondary)}>
-            BG Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTertiary)}>
-            BG Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextPrimary)}>
-            Text Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextSecondary)}>
-            Text Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextTertiary)}>
-            Text Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentPrimary)}>
-            Accent Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentSecondary)}>
-            Accent Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxPrimary)}>
-            BG Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxSecondary)}>
-            BG Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTertiary)}>
-            BG Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextPrimary)}>
-            Text Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextSecondary)}>
-            Text Secondary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxTextTertiary)}>
-            Text Tertiary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentPrimary)}>
-            Accent Primary
-          </div>
-          <div className={cn(styles.colorBox, styles.colorBoxAccentSecondary)}>
-            Accent Secondary
-          </div>
-        </div>
-      </main>
-    </div>
+          </li>
+        </ul>
+        <ul className={styles.verticalList}>
+          <h2 style={{ textAlign: "center" }}>Cards</h2>
+          {Array.from({ length: 15 }).map((_, index) => (
+            <li key={index}>
+              <GlassCard>
+                <h2>Glass Card</h2>
+                <p>
+                  This is a glass card. It is a card that is made of glass. It
+                  is a card that is made of glass. It is a card that is made of
+                  glass. It is a card that is made of glass. It is a card that
+                  is made of glass. It is a card that is made of glass. It is a
+                  card that is made of glass.
+                </p>
+              </GlassCard>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </main>
   )
 }
