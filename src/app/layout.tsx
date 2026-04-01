@@ -35,6 +35,30 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
+          <svg width="0" height="0">
+            <filter id="liquid-glass">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.008"
+                numOctaves="2"
+                result="turbulence"
+              >
+                <animate
+                  attributeName="baseFrequency"
+                  dur="20s"
+                  values="0.007;0.009;0.007"
+                  repeatCount="indefinite"
+                />
+              </feTurbulence>
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="turbulence"
+                scale="30"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+          </svg>
           {children}
         </ThemeProvider>
       </body>

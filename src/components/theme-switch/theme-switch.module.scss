@@ -7,7 +7,7 @@
   cursor: pointer;
   transition: scale var(--transition-fast);
   &:hover {
-    scale: 1.15;
+    scale: 1.1;
   }
 
   &Icon {
@@ -16,6 +16,35 @@
     & svg {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  &Placeholder {
+    @include flex-center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &PlaceholderSun {
+    opacity: 0.35;
+
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    }
+  }
+
+  &PlaceholderMoon {
+    display: none;
+    opacity: 0.35;
+
+    @media (prefers-color-scheme: dark) {
+      display: flex;
     }
   }
 }
